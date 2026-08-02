@@ -13,10 +13,10 @@ gsap.registerPlugin(SplitText);
 
 const menuItems = [
   { label: "Home", route: "/" },
-  { label: "Studio", route: "/studio" },
-  { label: "Work", route: "/work" },
-  { label: "Project", route: "/sample-project" },
-  { label: "Contact", route: "/contact" },
+  { label: "Studio", route: "/studio.html" },
+  { label: "Work", route: "/work.html" },
+  { label: "Project", route: "/sample-project.html" },
+  { label: "Contact", route: "/contact.html" },
 ];
 
 function buildNav() {

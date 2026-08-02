@@ -10,21 +10,21 @@ const work = [
     image: "/work/work1.jpg",
     accentColor: "#5865f2",
     ringColor: "#0f0f0f",
-    url: "/sample-project",
+    url: "/sample-project.html",
   },
   {
     name: "Nussy Motorsport",
     image: "/work/work2.jpg",
     accentColor: "#0f0f0f",
     ringColor: "#5865f2",
-    url: "/sample-project",
+    url: "/sample-project.html",
   },
   {
     name: "ASPL Racing",
     image: "/work/work3.jpg",
     accentColor: "#5865f2",
     ringColor: "#0f0f0f",
-    url: "/sample-project",
+    url: "/sample-project.html",
   },
 ];
 
