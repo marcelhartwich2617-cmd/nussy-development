@@ -19,9 +19,16 @@ nav {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
   width: max-content;
   padding: 0.5rem;
   text-decoration: none;
+}
+
+.nav-logo-icon {
+  width: auto;
+  height: 1.5rem;
+  object-fit: contain;
 }
 
 .nav-logo-text {
