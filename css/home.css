@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  background-color: var(--l);
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.hero .hero-header {
+  position: relative;
+  will-change: transform;
+}
+
+.hero h1 {
+  font-size: clamp(5rem, 25vw, 25rem);
+}
+
+.hero .hero-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 2.5rem;
+  color: var(--l);
+  mix-blend-mode: difference;
+}
+
+.hero .hero-footer .hero-footer-col {
+  display: flex;
+  gap: 5rem;
+}
+
+@media (max-width: 1000px) {
+  .hero .hero-footer {
+    padding: 2rem;
+  }
+
+  .hero .hero-footer .hero-footer-col {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+.pricing {
+  position: relative;
+  width: 100%;
+  padding: 6rem 0;
+  background-color: var(--d);
+  color: var(--l);
+}
+
+.pricing-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.pricing-copy {
+  max-width: 28rem;
+}
+
+.pricing-copy p {
+  color: var(--l);
+  opacity: 0.75;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.pricing-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid color-mix(in srgb, var(--l) 30%, transparent);
+  border-radius: 0.75rem;
+}
+
+.pricing-plan-featured {
+  grid-column: span 2;
+  background-color: color-mix(in srgb, var(--l) 12%, transparent);
+  border-color: var(--l);
+}
+
+.pricing-plan-eyebrow p {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.pricing-plan h5 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1;
+}
+
+.pricing-plan-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.pricing-plan-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: none;
+  opacity: 0.85;
+}
+
+@media (max-width: 1000px) {
+  .pricing {
+    padding: 4rem 0;
+  }
+
+  .pricing-header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-plan-featured {
+    grid-column: span 1;
+  }
+}
