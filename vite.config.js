@@ -42,6 +42,7 @@ export default defineConfig({
         "sample-project": resolve(__dirname, "sample-project.html"),
         studio: resolve(__dirname, "studio.html"),
         contact: resolve(__dirname, "contact.html"),
+        "thank-you": resolve(__dirname, "thank-you.html"),
       },
     },
     assetsInclude: [
