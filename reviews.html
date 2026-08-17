@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews | Nussy Development</title>
+    <meta name="author" content="" />
+    <meta
+      name="description"
+      content="Leave a review for Nussy Development — tell us how your Discord bot or website project went."
+    />
+    <meta name="theme-color" content="#0f0f0f" />
+    <link rel="icon" type="image/svg+xml" href="/logo/logo-icon.svg" />
+    <link rel="icon" type="image/png" href="/icons/site-icon.png" />
+    <link rel="stylesheet" href="/css/globals.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <script src="/js/wrappedgl.js"></script>
+    <script src="/js/simulator.js"></script>
+  </head>
+  <body>
+    <!-- reviews: navigation -->
+    <nav>
+      <div class="nav-logo">
+        <a href="/">
+          <img src="/logo/logo-icon.svg" alt="" class="nav-logo-icon" />
+          <span class="nav-logo-text">Nussy Development</span>
+        </a>
+      </div>
+      <div class="nav-icon">
+        <img src="/icons/nav-icon.png" alt="nav icon" />
+      </div>
+      <div class="nav-toggler">
+        <p>Menu</p>
+      </div>
+    </nav>
+
+    <!-- reviews: content -->
+    <section class="contact">
+      <div class="contact-headline">
+        <h3
+          data-animate-variant="slide"
+          data-animate-on-scroll="false"
+          data-animate-delay="0.8"
+          data-animate-stagger="0.1"
+        >
+          Tell Us How We Did. Your Feedback Helps Us Build Better For The
+          Next Team.
+        </h3>
+      </div>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mojzdrao"
+        method="POST"
+        data-animate-variant="slide"
+        data-animate-on-scroll="true"
+      >
+        <input type="hidden" name="_subject" value="New review submission from nussydevelopment.com" />
+
+        <div class="contact-form-row">
+          <div class="contact-form-field">
+            <label for="review-name">Name</label>
+            <input type="text" id="review-name" name="name" required />
+          </div>
+          <div class="contact-form-field">
+            <label for="review-email">Email</label>
+            <input type="email" id="review-email" name="email" required />
+          </div>
+        </div>
+
+        <div class="contact-form-row">
+          <div class="contact-form-field">
+            <label for="review-service">Which Service Did You Use?</label>
+            <select id="review-service" name="service_used">
+              <option>Discord Bot</option>
+              <option>Website</option>
+              <option>Combo Deal</option>
+            </select>
+          </div>
+          <div class="contact-form-field">
+            <label for="review-rating">Rating</label>
+            <select id="review-rating" name="rating">
+              <option value="5">5 — Excellent</option>
+              <option value="4">4 — Great</option>
+              <option value="3">3 — Good</option>
+              <option value="2">2 — Fair</option>
+              <option value="1">1 — Poor</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="contact-form-field">
+          <label for="review-message">Your Review</label>
+          <textarea id="review-message" name="review" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="contact-form-submit">Submit Review</button>
+      </form>
+
+      <div class="contact-footer">
+        <p
+          data-animate-variant="slide"
+          data-animate-on-scroll="true"
+          data-animate-stagger="0.1"
+        >
+          Reviews are checked before they're featured on the site. <br />
+          Questions? nussyconsulting@protonmail.com
+        </p>
+      </div>
+    </section>
+
+    <!-- reviews: footer -->
+    <footer>
+      <div id="footer-canvas"></div>
+      <div class="footer-inner">
+        <div class="footer-cta">
+          <span class="footer-cta-eyebrow">We Are Listening</span>
+          <h3 class="footer-cta-heading">Your Next Big Thing Starts Here</h3>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-logo">© Nussy Development</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/lenis-scroll.js"></script>
+    <script type="module" src="/js/cursor.js"></script>
+    <script type="module" src="/js/animated-copy.js"></script>
+    <script type="module" src="/js/simulation.js"></script>
+    <script type="module" src="/js/nav.js"></script>
+    <script type="module" src="/js/footer.js"></script>
+  </body>
+</html>

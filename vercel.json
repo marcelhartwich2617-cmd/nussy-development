@@ -6,6 +6,7 @@
     { "source": "/sample-project", "destination": "/sample-project.html" },
     { "source": "/studio", "destination": "/studio.html" },
     { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/thank-you", "destination": "/thank-you.html" }
+    { "source": "/thank-you", "destination": "/thank-you.html" },
+    { "source": "/reviews", "destination": "/reviews.html" }
   ]
 }

@@ -16,6 +16,7 @@ const menuItems = [
   { label: "Studio", route: "/studio.html" },
   { label: "Work", route: "/work.html" },
   { label: "Project", route: "/sample-project.html" },
+  { label: "Reviews", route: "/reviews.html" },
   { label: "Contact", route: "/contact.html" },
 ];
 

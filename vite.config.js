@@ -43,6 +43,7 @@ export default defineConfig({
         studio: resolve(__dirname, "studio.html"),
         contact: resolve(__dirname, "contact.html"),
         "thank-you": resolve(__dirname, "thank-you.html"),
+        reviews: resolve(__dirname, "reviews.html"),
       },
     },
     assetsInclude: [
