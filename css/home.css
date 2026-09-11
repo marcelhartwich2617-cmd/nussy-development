@@ -158,10 +158,12 @@ a.project-card:hover {
 }
 
 .testimonial-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   padding: 2.5rem;
+  padding-bottom: 6.5rem;
   border: 1px solid color-mix(in srgb, var(--d) 25%, transparent);
   border-radius: 0.75rem;
   color: var(--d);
@@ -182,6 +184,10 @@ a.project-card:hover {
 }
 
 .testimonial-author {
+  position: absolute;
+  left: 2.5rem;
+  right: 2.5rem;
+  bottom: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
