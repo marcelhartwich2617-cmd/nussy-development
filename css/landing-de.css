@@ -1,0 +1,91 @@
+.local-hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100svh;
+  padding: 9rem 0 5rem;
+}
+
+.local-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 62rem;
+}
+
+.local-eyebrow {
+  font-family: var(--f-nm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.local-hero h1 {
+  font-size: clamp(2.5rem, 9vw, 8rem);
+  line-height: 0.95;
+}
+
+.local-hero-copy {
+  max-width: 40rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: none;
+  line-height: 1.5;
+}
+
+.local-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.local-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--d);
+  border-radius: 0.5rem;
+  background-color: var(--d);
+  color: var(--l);
+  font-family: var(--f-nm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.local-btn:hover {
+  opacity: 0.85;
+}
+
+.local-btn-outline {
+  background-color: transparent;
+  color: var(--d);
+}
+
+.local-form-section {
+  width: 100%;
+  padding: 0 0 6rem;
+}
+
+.local-form-header {
+  margin-bottom: 2rem;
+}
+
+.local-form-section .contact-form {
+  max-width: 44rem;
+  padding: 0;
+}
+
+@media (max-width: 1000px) {
+  .local-hero {
+    padding: 7rem 0 3rem;
+  }
+
+  .local-form-section {
+    padding-bottom: 4rem;
+  }
+}

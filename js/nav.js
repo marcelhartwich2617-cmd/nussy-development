@@ -60,6 +60,10 @@ function buildNav() {
           <a href="https://www.nussymotorsport.de" target="_blank">Nussy Motorsport</a>
         </div>
         <div class="menu-content-group">
+          <p>Auf Deutsch</p>
+          <a href="/websites-kiel.html">Websites für Kiel &amp; Probstei</a>
+        </div>
+        <div class="menu-content-group">
           <p>Language</p>
           <p>Human</p>
         </div>

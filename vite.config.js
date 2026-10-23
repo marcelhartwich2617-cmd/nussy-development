@@ -44,6 +44,7 @@ export default defineConfig({
         contact: resolve(__dirname, "contact.html"),
         "thank-you": resolve(__dirname, "thank-you.html"),
         reviews: resolve(__dirname, "reviews.html"),
+        "websites-kiel": resolve(__dirname, "websites-kiel.html"),
       },
     },
     assetsInclude: [
