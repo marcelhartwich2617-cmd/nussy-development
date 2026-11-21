@@ -467,3 +467,80 @@ a.project-card:hover {
     padding-bottom: 4rem;
   }
 }
+
+/* hero CTA + scroll hint */
+.hero .hero-sub {
+  max-width: 38rem;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  line-height: 1.35;
+  opacity: 0;
+  animation: hero-in 0.8s ease 2.6s forwards;
+}
+
+.hero .hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+  padding: 0 1.5rem;
+  opacity: 0;
+  animation: hero-in 0.8s ease 2.8s forwards;
+}
+
+.hero .hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  color: var(--d);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  animation: hero-bounce 1.6s ease-in-out 3.2s infinite;
+}
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(0.6rem); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hero-bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 0.4rem); }
+}
+
+.cta-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem 1.8rem;
+  border: 1px solid var(--d);
+  border-radius: 0.5rem;
+  font-family: var(--f-nm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.cta-btn:hover { opacity: 0.85; }
+.cta-btn-solid { background: var(--d); color: var(--l); }
+.cta-btn-outline { background: transparent; color: var(--d); }
+
+.cta-band {
+  padding: 6rem 0;
+  text-align: center;
+}
+.cta-band h3 { max-width: 40rem; margin: 0 auto 1rem; }
+.cta-band p { margin-bottom: 1.8rem; }
+
+.pricing-cta { margin-top: 2rem; text-align: center; }
+
+@media (max-width: 1000px) {
+  .hero .hero-scroll { bottom: 6.5rem; }
+}
