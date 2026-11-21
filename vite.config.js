@@ -48,6 +48,8 @@ export default defineConfig({
         de: resolve(__dirname, "de.html"),
         impressum: resolve(__dirname, "impressum.html"),
         datenschutz: resolve(__dirname, "datenschutz.html"),
+        "legal-notice": resolve(__dirname, "legal-notice.html"),
+        privacy: resolve(__dirname, "privacy.html"),
       },
     },
     assetsInclude: [

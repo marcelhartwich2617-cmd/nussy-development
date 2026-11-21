@@ -53,8 +53,9 @@ function addExtras(nav) {
     fb.appendChild(d);
     const lg = document.createElement("div");
     lg.className = "footer-legal";
-    lg.innerHTML =
-      '<a href="/impressum.html">Impressum</a><a href="/datenschutz.html">Datenschutz</a>';
+    lg.innerHTML = IS_DE
+      ? '<a href="/impressum.html">Impressum</a><a href="/datenschutz.html">Datenschutz</a>'
+      : '<a href="/legal-notice.html">Legal Notice</a><a href="/privacy.html">Privacy Policy</a>';
     fb.appendChild(lg);
   }
 }
