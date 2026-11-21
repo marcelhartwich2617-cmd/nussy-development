@@ -554,3 +554,26 @@ a.project-card:hover {
   border-radius: 0.5rem;
   border: 1px solid color-mix(in srgb, var(--d) 25%, transparent);
 }
+
+.showcase { padding: 4rem 0 6rem; }
+.showcase h3 { margin-bottom: 2.5rem; }
+.showcase-phones {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.phone { margin: 0; flex: 0 1 15rem; text-align: center; }
+.phone img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 390 / 780;
+  object-fit: cover;
+  border: 0.5rem solid var(--d);
+  border-radius: 2rem;
+}
+.phone figcaption { margin-top: 0.8rem; font-size: 0.85rem; font-weight: 700; }
+@media (max-width: 700px) {
+  .showcase-phones { gap: 0.8rem; }
+  .phone img { border-width: 0.3rem; border-radius: 1rem; }
+  .phone figcaption { font-size: 0.65rem; }
+}
