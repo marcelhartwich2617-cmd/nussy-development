@@ -45,6 +45,7 @@ export default defineConfig({
         "thank-you": resolve(__dirname, "thank-you.html"),
         reviews: resolve(__dirname, "reviews.html"),
         "websites-kiel": resolve(__dirname, "websites-kiel.html"),
+        de: resolve(__dirname, "de.html"),
       },
     },
     assetsInclude: [

@@ -20,9 +20,42 @@ const menuItems = [
   { label: "Contact", route: "/contact.html" },
 ];
 
+const SOCIAL = [
+  ["Instagram", "https://www.instagram.com/nussydevelopment"],
+  ["TikTok", "https://www.tiktok.com/@nussydevelopment"],
+  ["X", "https://x.com/nussydevelopment"],
+  ["LinkedIn", "https://www.linkedin.com/company/nussydevelopment"],
+];
+
+const IS_DE = document.documentElement.lang === "de";
+
+function addExtras(nav) {
+  if (!nav.querySelector(".lang-switch")) {
+    const a = document.createElement("a");
+    a.className = "lang-switch";
+    a.href = IS_DE ? "/" : "/de.html";
+    a.textContent = IS_DE ? "EN" : "DE";
+    a.setAttribute(
+      "aria-label",
+      IS_DE ? "Switch to English" : "Auf Deutsch wechseln",
+    );
+    nav.appendChild(a);
+  }
+  const fb = document.querySelector(".footer-bottom");
+  if (fb && !fb.querySelector(".footer-social")) {
+    const d = document.createElement("div");
+    d.className = "footer-social";
+    d.innerHTML = SOCIAL.map(
+      ([l, u]) => `<a href="${u}" target="_blank" rel="noopener">${l}</a>`,
+    ).join("");
+    fb.appendChild(d);
+  }
+}
+
 function buildNav() {
   const nav = document.querySelector("nav");
   if (!nav) return;
+  addExtras(nav);
 
   // Prevent duplicate overlays if any script re-runs.
   const existingOverlay = document.querySelector(".menu-overlay");
@@ -56,16 +89,16 @@ function buildNav() {
       <div class="menu-col" data-col="1">
         <div class="menu-content-group">
           <p>See Our Work</p>
-          <a href="https://www.prlesports.com" target="_blank">PRL Esports</a>
           <a href="https://www.nussymotorsport.de" target="_blank">Nussy Motorsport</a>
         </div>
         <div class="menu-content-group">
           <p>Auf Deutsch</p>
+          <a href="/de.html">Deutsche Startseite</a>
           <a href="/websites-kiel.html">Websites für Kiel &amp; Probstei</a>
         </div>
         <div class="menu-content-group">
-          <p>Language</p>
-          <p>Human</p>
+          <p>Follow Us</p>
+          ${SOCIAL.map(([l, u]) => `<a href="${u}" target="_blank" rel="noopener">${l}</a>`).join("")}
         </div>
         <div class="menu-content-group">
           <p>Est. 2026</p>
