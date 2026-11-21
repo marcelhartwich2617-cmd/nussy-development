@@ -1,0 +1,47 @@
+.notice {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  max-width: 34rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid #fff;
+  border-radius: 0.6rem;
+  background: var(--d);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: none;
+}
+.notice p { margin: 0; font-size: inherit; text-transform: none; }
+.notice a { color: #fff; text-decoration: underline; }
+.notice button {
+  padding: 0.5rem 1.2rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: var(--l);
+  color: #fff;
+  font-family: var(--f-nm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.footer-legal {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.footer-legal a {
+  color: inherit;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .notice { right: 1rem; max-width: none; }
+}

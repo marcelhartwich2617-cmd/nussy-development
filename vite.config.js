@@ -46,6 +46,8 @@ export default defineConfig({
         reviews: resolve(__dirname, "reviews.html"),
         "websites-kiel": resolve(__dirname, "websites-kiel.html"),
         de: resolve(__dirname, "de.html"),
+        impressum: resolve(__dirname, "impressum.html"),
+        datenschutz: resolve(__dirname, "datenschutz.html"),
       },
     },
     assetsInclude: [

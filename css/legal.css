@@ -1,0 +1,35 @@
+.legal {
+  width: 100%;
+  min-height: 100svh;
+  padding: 9rem 0 6rem;
+  background-color: var(--d);
+  color: #fff;
+}
+.legal-inner {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.legal h1 {
+  margin-bottom: 2rem;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 0.95;
+  color: var(--l);
+}
+.legal h2 {
+  margin: 2.2rem 0 0.6rem;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  color: var(--l);
+}
+.legal p,
+.legal li {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.55;
+  text-transform: none;
+  color: #fff;
+}
+.legal p { margin-bottom: 0.8rem; }
+.legal ul { margin: 0 0 0.8rem 1.2rem; list-style: disc; }
+.legal a { color: #fff; text-decoration: underline; }

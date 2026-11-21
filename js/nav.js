@@ -1,4 +1,6 @@
 import gsap from "gsap";
+import "/css/notice.css";
+import "/js/notice.js";
 import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(SplitText);
@@ -49,6 +51,11 @@ function addExtras(nav) {
       ([l, u]) => `<a href="${u}" target="_blank" rel="noopener">${l}</a>`,
     ).join("");
     fb.appendChild(d);
+    const lg = document.createElement("div");
+    lg.className = "footer-legal";
+    lg.innerHTML =
+      '<a href="/impressum.html">Impressum</a><a href="/datenschutz.html">Datenschutz</a>';
+    fb.appendChild(lg);
   }
 }
 
