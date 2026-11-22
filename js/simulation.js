@@ -605,7 +605,30 @@ const __onResize = () => {
 let last = Date.now();
 let __raf = 0;
 
+// Cut a hole in the effect canvas over any <video> so the picture is untouched.
+let __maskKey = "";
+function updateVideoMask() {
+  const holes = [];
+  const vh = window.innerHeight;
+  const vw = window.innerWidth;
+  document.querySelectorAll("video").forEach((v) => {
+    const r = v.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < vh && r.right > 0 && r.left < vw) {
+      holes.push(
+        `M${r.left.toFixed(1)} ${r.top.toFixed(1)}H${r.right.toFixed(1)}V${r.bottom.toFixed(1)}H${r.left.toFixed(1)}Z`,
+      );
+    }
+  });
+  const key = holes.join("") + vw + "x" + vh;
+  if (key === __maskKey) return;
+  __maskKey = key;
+  canvas.style.clipPath = holes.length
+    ? `path(evenodd, "M0 0H${vw}V${vh}H0Z${holes.join("")}")`
+    : "none";
+}
+
 function loop() {
+  updateVideoMask();
   const now = Date.now();
   const dt = Math.min((now - last) / 1000, C.maxDt);
   last = now;
