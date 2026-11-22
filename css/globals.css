@@ -202,3 +202,13 @@ html.lenis body {
     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
   }
 }
+
+@media (pointer: fine) {
+  #custom-cursor.is-visible.is-hidden {
+    opacity: 0;
+    transition: none;
+  }
+  video {
+    cursor: auto;
+  }
+}
