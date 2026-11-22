@@ -38,6 +38,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        en: resolve(__dirname, "en.html"),
         work: resolve(__dirname, "work.html"),
         "sample-project": resolve(__dirname, "sample-project.html"),
         studio: resolve(__dirname, "studio.html"),

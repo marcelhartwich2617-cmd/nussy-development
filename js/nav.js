@@ -13,8 +13,11 @@ try {
 
 gsap.registerPlugin(SplitText);
 
+const IS_DE = document.documentElement.lang === "de";
+const HOME = IS_DE ? "/" : "/en.html";
+
 const menuItems = [
-  { label: "Home", route: "/" },
+  { label: "Home", route: HOME },
   { label: "Studio", route: "/studio.html" },
   { label: "Work", route: "/work.html" },
   { label: "Project", route: "/sample-project.html" },
@@ -29,13 +32,13 @@ const SOCIAL = [
   ["LinkedIn", "https://www.linkedin.com/company/nussydevelopment"],
 ];
 
-const IS_DE = document.documentElement.lang === "de";
-
 function addExtras(nav) {
+  const logo = nav.querySelector(".nav-logo a");
+  if (logo) logo.setAttribute("href", HOME);
   if (!nav.querySelector(".lang-switch")) {
     const a = document.createElement("a");
     a.className = "lang-switch";
-    a.href = IS_DE ? "/" : "/de.html";
+    a.href = IS_DE ? "/en.html" : "/";
     a.textContent = IS_DE ? "EN" : "DE";
     a.setAttribute(
       "aria-label",
@@ -100,8 +103,8 @@ function buildNav() {
           <a href="https://www.nussymotorsport.de" target="_blank">Nussy Motorsport</a>
         </div>
         <div class="menu-content-group">
-          <p>Auf Deutsch</p>
-          <a href="/de.html">Deutsche Startseite</a>
+          <p>${IS_DE ? "English" : "Auf Deutsch"}</p>
+          ${IS_DE ? '<a href="/en.html">English homepage</a>' : '<a href="/">Deutsche Startseite</a>'}
           <a href="/websites-kiel.html">Websites für Kiel &amp; Probstei</a>
         </div>
         <div class="menu-content-group">

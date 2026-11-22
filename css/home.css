@@ -577,3 +577,17 @@ a.project-card:hover {
   .phone img { border-width: 0.3rem; border-radius: 1rem; }
   .phone figcaption { font-size: 0.65rem; }
 }
+
+.intro-video { padding: 4rem 0 2rem; }
+.intro-video h3 { margin-bottom: 2rem; }
+.intro-video-player {
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border: 0.4rem solid var(--d);
+  border-radius: 1rem;
+  background: var(--d);
+}
+.intro-video-cap { margin-top: 0.8rem; text-align: center; font-size: 0.85rem; }
