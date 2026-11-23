@@ -89,8 +89,8 @@ function buildNav() {
       <div class="menu-col" data-col="0">
         <div class="menu-content-group">
           <p>&copy; Nussy Development</p>
-          <p>Discord Bots</p>
-          <p>&amp; Websites</p>
+          <p>Websites</p>
+          <p>&amp; Technical Systems</p>
         </div>
         <div class="menu-content-group">
           <p>Say Hello</p>
